@@ -1,0 +1,174 @@
+<html>
+	<head>
+        <title> Raspored casova </title>
+        <link rel="stylesheet" href="raspored.css">
+	</head>
+	<body>
+		<h2 style="text-align: center;"> Veljko Jevtic S16/2019 </h2>
+
+		<style type="text/css">
+			ul li{
+				display: inline-block;
+			}
+        </style>
+        <style> 
+            tr:nth-child(odd) {
+              background: rgb(0, 0, 255);
+            }
+            
+            tr:nth-child(even) {
+              background: rgb(159, 159, 255);
+            }
+            
+            </style>
+        <form>
+            <input type="text" style="margin-left: 44%;"> 
+        </form>
+<table border ="2" style="color: white; border-collapse: collapse; margin-left: 15%;">
+    <tr>
+        <th>Predmet</th>
+        <th>Tip</th>
+        <th>Nastavnik</th>
+        <th>Grupe</th>
+        <th>Dan</th>
+        <th>Termin</th>
+        <th>Ucionica</th>
+    </tr>
+        {% for i in raspored %}
+            <tr>
+                
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+                <td>{{i[5]}}</td>
+                <td>{{i[6]}}</td>
+                <td>{{i[7]}}</td>       
+    
+            </tr>
+            
+    
+        {% endfor %}
+    
+    </table>
+
+    <div style="margin-left: 25%; float: left;">  
+        <h3>Nastavnici:</h3><br> 
+        <a href="javascript:void(0)" onclick="filter('Al Hakan Alya');">Al Hakan Alya</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Antonijevic Rados');">Antonijevic Rados</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Arsenijevic Ognjen');">Arsenijevic Ognjen</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Babic Djorde');">Babic Djorde</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Bojovic Petar');">Bojovic Petar</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Ciganovic Igor');">Ciganovic Igor</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Cosovic Filip');">Cosovic Filip</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Cuk Bojana');">Cuk Bojana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Dimic Surla Bojana');">Dimic Surla Bojana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Djuric Milan');">Djuric Milan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Djuricic Ana');">Djuricic Ana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Elezovic Ivan');">Elezovic Ivan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Eskobar Dobrijevic Katarina');">Eskobar Dobrijevic Katarina</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Galic Luka');">Galic Luka</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Gardasevic Filipovic Milanka');">Gardasevic Filipovic Milanka</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Hadzi Ristic Filip');">Hadzi Ristic Filip</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Ilic Nemanja');">Ilic Nemanja</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Ivanovic Jovana');">Ivanovic Jovana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Jankovski Ivan');">Jankovski Ivan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Jelic Lazar');">Jelic Lazar</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Jerotijevic Marija');">Jerotijevic Marija</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Jonjic Teodora');">Jonjic Teodora</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Jovanovic Irena');">Jovanovic Irena</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Jovanovic Jelena');">Jovanovic Jelena</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Karbunar Lazar');">Karbunar Lazar</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Kokic Ivan');">Kokic Ivan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Kokic Natalija');">Kokic Natalija</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Kostadinovic Miodrag');">Kostadinovic Miodrag</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Lale Sinisa');">Lale Sinisa</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Lazic Ljubomir');">Lazic Ljubomir</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Lutovac Maja');">Lutovac Maja</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Malesevic Nenad');">Malesevic Nenad</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Mandic Dejana');">Mandic Dejana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Manojlovic Miodrag');">Manojlovic Miodrag</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Manojlovic Miodrag, Ognjanovic Ivana');">Manojlovic Miodrag, Ognjanovic Ivana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Maric Nevena');">Maric Nevena</a><br> 
+        <a href="javascript:void(0)" onclick="filter('MarkovicAna');">Markovic Ana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Martic Goran');">Martic Goran</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Masulovic Dragan');">Masulovic Dragan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Micic Aleksandar');">Micic Aleksandar</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Mijatovic Igor');">Mijatovic Igor</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Milinkovic Stevan');">Milinkovic Stevan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Milojkovic Branislav');">Milojkovic Branislav</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Milosavljevic Milos');">Milosavljevic Milos</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Milovic Njegovan');">Milovic Njegovan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Milunovic Milos');">Milunovic Milos</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Milutinovic Dragoslav');">Milutinovic Dragoslav</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Mirkovic Bogdan');">Mirkovic Bogdan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Perisic Branko');">Perisic Branko</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Pilipovic Dragoljub');">Pilipovic Dragoljub</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Popovic Snezana');">Popovic Snezana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Prvulovic Petar');">Prvulovic Petar</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Radenkovic Milos');">Radenkovic Milos</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Radivojevic Mirjana');">Radivojevic Mirjana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Radosavljevic Nemanja');">Radosavljevic Nemanja</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Radovic Mihailo');">Radovic Mihailo</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Radulovic Natasa');">Radulovic Natasa</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Rakocevic Goran');">Rakocevic Goran</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Rankovic Dragica');">Rankovic Dragica</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Rankovic Nevena');">Rankovic Nevena</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Redzic Nikola Jovan');">Redzic Nikola Jovan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Rubil Goran');">Rubil Goran</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Sijacic Dusan');">Sijacic Dusan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Spasic Nikola');">Spasic Nikola</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Stambolovic Bogdana');">Stambolovic Bogdana</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Stankovic Maja');">Stankovic Maja</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Stanojevic Mladen');">Stanojevic Mladen</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Stetin Darko');">Stetin Darko</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Stojanovic Danica');">Stojanovic Danica</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Stojanovic Visnja');">Stojanovic Visnja</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Subotic Silvija');">Subotic Silvija</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Tanasic Slobodan');">Tanasic Slobodan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Tesic Nemanja');">Tesic Nemanja</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Tomic Milan');">Tomic Milan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Topuzovic Filip');">Topuzovic Filip</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Urosevic Dragan');">Urosevic Dragan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Vasiljevic Jelena');">Vasiljevic Jelena</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Veniger Marko');">Veniger Marko</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Vesovic Marko');">Vesovic Marko</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Vidakovic MIlan');">Vidakovic MIlan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Vranes Nikolina');">Vranes Nikolina</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Vrbica-Matejic Vera');">Vrbica-Matejic Vera</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Vucicevic Nemanja');">Vucicevic Nemanja</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Vujosevic Dusan');">Vujosevic Dusan</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Vukotic Selena');">Vukotic Selena</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Zdravkovic Tamara');">Zdravkovic Tamara</a><br> 
+        <a href="javascript:void(0)" onclick="filter('Zivkovic Stefan');">Zivkovic Stefan</a><br> 
+        </div>
+        
+        <div style="float: right; margin-right: 25%;">
+        <h3>Učionica:</h3><br>
+        <a href="javascript:void(0)" onclick="filter('AteljeBB');">Atelje BB</a> [Kirovljeva, Banovo Brdo]<br> 
+        <a href="javascript:void(0)" onclick="filter('AteljeKM');">Atelje KM</a> [K. Mihailova 10, VIII sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('CET 1');">CET 1</a> []<br> 
+        <a href="javascript:void(0)" onclick="filter('FotoStudioKM');">Foto studio</a> [K. Mihailova 10, VIII sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('FotoStudioBB');">Foto studio BB</a> [Kirovljeva, Banovo Brdo]<br> 
+        <a href="javascript:void(0)" onclick="filter('Kolarac1');">Kolarac 1</a> [Studentski trg 5]<br> 
+        <a href="javascript:void(0)" onclick="filter('Kolarac2');">Kolarac 2</a> [Studentski trg 5]<br> 
+        <a href="javascript:void(0)" onclick="filter('Kolarac3');">Kolarac 3</a> [Studentski trg 5]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf-1');">RAF 1</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf11');">Raf 11</a> [III sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf14');">Raf 14</a> [K. Mihailova 10, VIII sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf18');">Raf 18</a> [VIII sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf2');">Raf 2</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf3');">Raf 3</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf4');">Raf 4</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf5');">Raf 5</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf6');">Raf 6</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf7');">Raf 7</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Raf8');">Raf 8</a> [III sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Rg1');">Rg 1</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Rg2');">Rg 2</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Rg4');">Rg 4</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Rg6');">Rg 6</a> [VI sprat]<br> 
+        <a href="javascript:void(0)" onclick="filter('Rg7');">Rg 7</a> [VI sprat]<br> 
+        </div>
+    </body>
+</html>
